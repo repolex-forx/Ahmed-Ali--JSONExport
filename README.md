@@ -1,1 +1,127 @@
-Initializing
+# Repolex Knowledge Graph of Ahmed-Ali/JSONExport
+
+RDF knowledge graph data for [Ahmed-Ali/JSONExport](https://github.com/Ahmed-Ali/JSONExport), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download Ahmed-Ali/JSONExport
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 9f1064fd05b6ed9b2e396147da9899071325a129
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 9f1064fd05b6ed9b2e396147da9899071325a129
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 02209a881f73cbd603cc9e50f8fa04844cc8d433.nq.gz
+│   ├── 02df0b05c8c947a5afc7b0b12cb2def3a2dd9083.nq.gz
+│   ├── 05e2895adcb926907e23d8849e50f75f7d5e2f4f.nq.gz
+│   ├── 072297a4c9bcfad6c536801acfcc58399fb783a9.nq.gz
+│   ├── 1305bc9630c14a9bac0cb5984d75865b2b38deee.nq.gz
+│   ├── 162e3f2f5f05b561c7a39ba7b5648b89aa06a045.nq.gz
+│   ├── 18d981003d68d0546c4804ac2ff47dd97c6e7921.nq.gz
+│   ├── 194903f96c7c94f23489b59b499cc6f15e13d1e3.nq.gz
+│   ├── 1a0810aa05a3c9e16178c4ab6d507cb350e788ec.nq.gz
+│   ├── 1ccfc360af54d60179df7da606a2df28032b7e78.nq.gz
+│   ├── 203ca51ef24b1c13b1cf568f34337746084eb61a.nq.gz
+│   ├── 245983f27df1a2fbf1b0dfe8d077f19b590243fa.nq.gz
+│   ├── 2d83ad723029b0304093b877f71697cdf07b952a.nq.gz
+│   ├── 2ff5f7a01778918386afd0272d3d6f27b3b1b934.nq.gz
+│   ├── 315e354b75a6a53ed916f70b3995e0c8eb836eac.nq.gz
+│   ├── 38a4512235e2c2daccfaa781f3ff56118a304ea6.nq.gz
+│   ├── 3c5e3de676fddc6ae9c1646503d0829de24bf310.nq.gz
+│   ├── 3fdfe46e94fc7de0c8dbcd3ba51cf5215902a69a.nq.gz
+│   ├── 46a37a2a6429fceb6e602df7564f20c3eae1a6b3.nq.gz
+│   ├── 4d3b62fa311fcb848a9f0c97f83aa3879a1e37a6.nq.gz
+│   ├── 5a34d7682296741d0f59d10efa3fa09d3dcd08d3.nq.gz
+│   ├── 657c86779ea93feed4c88ffb9250b643adfa582d.nq.gz
+│   ├── 6a3e5ca17125ec2559c2e0e8440f2f29ef55e22f.nq.gz
+│   ├── 6b71f033c5e414a6fb42bb4cfd15a9eca8aa0b46.nq.gz
+│   ├── 6d6f75ebf883c014d8e0c882a45c6bd44d1b7d42.nq.gz
+│   ├── 78914dc68270956a566889e553a3f45528c403ca.nq.gz
+│   ├── 79929c1e08e48459ff540a6d02c30cf4c1dc5ad2.nq.gz
+│   ├── 9101b20df9421834ac6a57083b4be702b9ba4e91.nq.gz
+│   ├── 919434a6254f0e9651f402737811be6634a03e9c.nq.gz
+│   ├── 9f79c1eed77314afb9c3ef7d07c999b0cdc188c6.nq.gz
+│   ├── a19efb9b58f462ed36cff504317c09753f4eec7e.nq.gz
+│   ├── a4cd043908519be9e8fd9d76d8f7afad7ae47abb.nq.gz
+│   ├── aef17778ccea8f0d63acda2200719310be6863c2.nq.gz
+│   ├── b10b81095b49959de5a6f135a1d99d8197cef0b5.nq.gz
+│   ├── b3220019b9099b251bec759113b6d5e57a9caeb9.nq.gz
+│   ├── b73967bbe21574c6df204e5c98ca0918130a4312.nq.gz
+│   ├── b78f0611a796b38ed66feadb1d0af9efff053692.nq.gz
+│   ├── bfc2f4c654a11e538e97b6476dcee15016411cd6.nq.gz
+│   ├── c31d8f8fe10cfe17e000c241cc61e2fa2d3020f5.nq.gz
+│   ├── d1605c458cc2bd789a612caa9b50d00fe6dc9aa7.nq.gz
+│   ├── d563afadeece1228cee6abd3f476ee81a148f1ca.nq.gz
+│   ├── d772ebe7a770fe81fe31a3571a206ed9377f8e31.nq.gz
+│   ├── ed71e6e7c5c0c2d14cf025b13f271b785923474c.nq.gz
+│   ├── f69c1189d666cfe10360402efa259399970f1374.nq.gz
+│   ├── fafc686a767c8bdff3415589310368b7a8c0dd71.nq.gz
+│   ├── fe2b45415124ec4c223006e19defd56850da95d9.nq.gz
+│   ├── fe8763490426bfa36d6b73a8add69af3309306ea.nq.gz
+│   └── fe91b3aa5b7b7cae08bf18d5d495c14ae4efcbfb.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 9f1064fd05b6ed9b2e396147da9899071325a129.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 56 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[Ahmed-Ali/JSONExport](https://github.com/Ahmed-Ali/JSONExport)
+
+---
+*Parsed on 2026-11-09 by [repolex](https://repolex.ai)*
